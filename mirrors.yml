@@ -1,0 +1,12 @@
+logfile: multimirror.log
+
+projects:
+  - {
+      name: 'wireshark',
+      source: 'https://code.wireshark.org/review/wireshark',
+      path: '/var/tmp',
+      destinations: [
+        { name: 'gitlab', url: 'git@gitlab.com:crondaemon/wireshark.git' },
+        { name: 'github', url: 'git@github.com:crondaemon/wireshark.git' }
+      ]
+    }
