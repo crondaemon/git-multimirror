@@ -15,7 +15,8 @@ end
 conf = YAML.load_file(ARGV.first)
 
 logger = Logger.new(conf['logfile'] || STDOUT)
-logger.info("Starting")
+logger.level = Logger::INFO
+logger.info("Starting #{File.basename($0)} using config file #{ARGV.first}")
 
 conf['projects'].each do |project|
 	if !validate_project(project)
