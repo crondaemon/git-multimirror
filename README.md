@@ -2,6 +2,10 @@
 
 This utility works to mirror one central git repository to many secondary repos. It is intended to run frequently (as in a cron job) to make mirrors updates as fast as possible. It supports multiple projects.
 
+## Installing utility dependencies
+
+`git-multimirror` relies on Gemfile. Run `bundler` to install all necessary packages.
+
 ## Configuration file
 
 The [YAML](http://yaml.org/) configuration file is to be configured to support your project. An example for wireshark is provided:
